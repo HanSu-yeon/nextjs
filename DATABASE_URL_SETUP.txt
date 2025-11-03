@@ -1,0 +1,11 @@
+# DATABASE_URL 설정
+
+.env.local 파일에 다음 내용을 추가하세요:
+
+DATABASE_URL="postgresql://postgres:qwer1234!!@db.bxxsincguebrzumszyaw.supabase.co:5432/postgres"
+
+주의사항:
+1. .env.local 파일은 Git에 커밋하지 마세요 (자동으로 제외됨)
+2. 비밀번호는 안전하게 보관하세요
+3. Vercel 배포 시에도 동일한 환경 변수를 설정해야 합니다
+

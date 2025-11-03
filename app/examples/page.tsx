@@ -225,6 +225,31 @@ export default function ExamplesPage() {
 				<h3 style={{ marginBottom: "1rem", color: "#0c4a6e" }}>⚠️ 에러 발생 시:</h3>
 				<ul style={{ lineHeight: "1.8", color: "#0c4a6e" }}>
 					<li>
+						<strong>&quot;new row violates row-level security policy&quot;</strong>:{" "}
+						<strong style={{ color: "#dc2626" }}>Row Level Security (RLS) 정책 문제입니다!</strong>
+						<br />
+						해결 방법:
+						<ol style={{ marginTop: "0.5rem", marginLeft: "1.5rem", lineHeight: "1.6" }}>
+							<li>Supabase Dashboard → Authentication → Policies</li>
+							<li>해당 테이블 선택 (예: test)</li>
+							<li>&quot;New Policy&quot; 클릭 → &quot;Create policy from scratch&quot;</li>
+							<li>
+								정책 설정:
+								<ul style={{ marginTop: "0.25rem", marginLeft: "1rem" }}>
+									<li>Policy name: &quot;Enable insert for all users&quot;</li>
+									<li>Allowed operation: INSERT 선택</li>
+									<li>Policy definition: &quot;true&quot; 입력</li>
+								</ul>
+							</li>
+							<li>SELECT, UPDATE, DELETE 정책도 필요하면 추가 생성</li>
+							<li>
+								또는 개발 환경에서는 RLS를 비활성화: Table Editor → 테이블 선택 → 우측 상단
+								&quot;Disable RLS&quot;
+							</li>
+						</ol>
+						📖 자세한 내용: <code>docs/RLS_SETUP.md</code> 참고
+					</li>
+					<li>
 						<strong>&quot;Could not find the &apos;name&apos; column&quot;</strong>: 테이블에 해당 컬럼이
 						없습니다. Supabase Dashboard에서 테이블 구조를 확인하세요.
 					</li>

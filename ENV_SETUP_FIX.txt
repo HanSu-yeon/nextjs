@@ -1,0 +1,21 @@
+# .env 파일 설정 가이드
+
+## 올바른 설정
+
+### Connection Pooling (일반 쿼리용) - 6543 포트
+DATABASE_URL="postgresql://postgres.bxxsincguebrzumszyaw:qwer1234%21%21@aws-1-ap-southeast-1.pooler.supabase.com:6543/postgres?pgbouncer=true"
+
+### Direct Connection (마이그레이션용) - 5432 포트  
+DIRECT_URL="postgresql://postgres.bxxsincguebrzumszyaw:qwer1234%21%21@aws-1-ap-southeast-1.pooler.supabase.com:5432/postgres"
+
+## 또는 Direct connection URL 사용 (마이그레이션용)
+
+만약 위 DIRECT_URL이 작동하지 않으면:
+
+DIRECT_URL="postgresql://postgres:qwer1234%21%21@db.bxxsincguebrzumszyaw.supabase.co:5432/postgres?sslmode=require"
+
+## 차이점
+
+- DATABASE_URL (6543): 일반 쿼리용 - Connection pooling 사용
+- DIRECT_URL (5432): 마이그레이션, db pull 등 특수 작업용
+
