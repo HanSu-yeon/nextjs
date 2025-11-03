@@ -225,11 +225,12 @@ export default function ExamplesPage() {
 				<h3 style={{ marginBottom: "1rem", color: "#0c4a6e" }}>⚠️ 에러 발생 시:</h3>
 				<ul style={{ lineHeight: "1.8", color: "#0c4a6e" }}>
 					<li>
-						<strong>"Could not find the 'name' column"</strong>: 테이블에 해당 컬럼이 없습니다. Supabase
-						Dashboard에서 테이블 구조를 확인하세요.
+						<strong>&quot;Could not find the &apos;name&apos; column&quot;</strong>: 테이블에 해당 컬럼이
+						없습니다. Supabase Dashboard에서 테이블 구조를 확인하세요.
 					</li>
 					<li>
-						<strong>"does not exist"</strong>: 테이블이 존재하지 않습니다. 먼저 테이블을 생성하세요.
+						<strong>&quot;does not exist&quot;</strong>: 테이블이 존재하지 않습니다. 먼저 테이블을
+						생성하세요.
 					</li>
 					<li>
 						테이블 구조에 맞는 데이터를 삽입해야 합니다. 테이블 구조는 Supabase Dashboard의 Table Editor에서
